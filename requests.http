@@ -1,4 +1,26 @@
 GET http://localhost:3000/plants
 
-###
+### show
 GET http://localhost:3000/plants/2
+
+### create
+POST http://localhost:3000/plants
+content-type: application/json
+
+{
+  "name": "Test",
+  "plant_type": "Test plant",
+  "image": "test",
+  "description": "testing"
+}
+
+### update
+PATCH http://localhost:3000/plants/1
+content-type: application/json
+
+{
+  "name": "Baby Yoda"
+}
+
+### destroy
+DELETE http://localhost:3000/plants/5
