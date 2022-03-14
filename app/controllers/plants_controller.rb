@@ -5,4 +5,11 @@ class PlantsController < ApplicationController
     render json: plant.as_json
   end
 
+  def show
+    plant = Plant.find_by(id: params[:id])
+    render json: plant.as_json
+  end
+
+  
+  
 end
